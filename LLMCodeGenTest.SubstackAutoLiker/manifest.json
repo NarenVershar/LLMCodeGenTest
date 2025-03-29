@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Substack Auto-Liker",
     "version": "1.0",
-    "description": "Automatically likes Substack posts on specified sites after 30 seconds of viewing.",
+    "description": "Automatically likes Substack posts on specified sites after 10 seconds of viewing.",
     "permissions": [
       "tabs",      // To get tab info (URL, active state) and listen to events
       "scripting", // To inject the content script

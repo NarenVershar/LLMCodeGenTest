@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Substack Auto-Liker",
+    "version": "1.0",
+    "description": "Automatically likes Substack posts on specified sites after 30 seconds of viewing.",
+    "permissions": [
+      "tabs",      // To get tab info (URL, active state) and listen to events
+      "scripting", // To inject the content script
+      "storage"    // Optional: Could be used to persist likeCount across sessions
+    ],
+    "host_permissions": [
+      "*://*.substack.com/*",   // General permission for Substack hosted sites
+      "*://*.tortugamedia.net/*" // Default site specified in the request
+      // Add more patterns here if needed, matching the sitesToLike variable
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }

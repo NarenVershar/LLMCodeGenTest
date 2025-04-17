@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Substack Scan & Liker",
+    "version": "3.0",
+    "description": "Scans for new Substack articles from subscriptions, then attempts to like all stored articles.",
+    "permissions": [
+      "storage",    // To save and read article URLs
+      "scripting",  // To inject content scripts
+      "tabs",       // To open, manage, and get info about tabs
+      "windows"    // To open the initial settings window
+      // Removed: "downloads"
+    ],
+    "host_permissions": [
+      "https://substack.com/*",  // For settings page and login check
+      "*://*.substack.com/*",   // For accessing publication home pages and articles
+      "https://*/*" // For urls without substack.com
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
